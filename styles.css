@@ -1,6 +1,7 @@
 :root {
     --main-bg-color: #800000; /* สีเลือดหมู */
-    --accent-color: #000000; /* สีดำ */
+    --secondary-bg-color: #f8f8f8; /* สีพื้นหลังรอง (สีเทาอ่อน) */
+    --accent-color: #333; /* สีดำ */
     --text-color: #fff; /* สีขาว */
     --highlight-color: #ffcc00; /* สีสำหรับปุ่ม */
     --border-radius: 10px; /* ค่ารัศมีสำหรับมุม */
@@ -9,14 +10,14 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: var(--main-bg-color);
-    color: var(--text-color);
+    background-color: var(--secondary-bg-color); /* พื้นหลังของ body เป็นสีเทาอ่อน */
+    color: var(--accent-color); /* สีข้อความ */
     margin: 0;
     padding: 0;
 }
 
 .header {
-    background-color: var(--main-bg-color);
+    background-color: var(--main-bg-color); /* สีเลือดหมูสำหรับ header */
     color: var(--text-color);
     text-align: center;
     padding: 20px;
@@ -31,7 +32,7 @@ body {
 .navbar {
     display: flex;
     justify-content: center;
-    background-color: var(--accent-color);
+    background-color: var(--accent-color); /* สีดำสำหรับ navbar */
     padding: 10px 0;
 }
 
@@ -43,7 +44,7 @@ body {
 }
 
 #hero {
-    background: url('hero-bg.jpg') no-repeat center center/cover;
+    background: url('hero-bg.jpg') no-repeat center center/cover; /* แบ็กกราวด์สำหรับ hero */
     padding: 60px 20px;
     text-align: center;
     color: var(--text-color);
@@ -60,10 +61,10 @@ body {
 }
 
 .camera-item {
-    background-color: var(--accent-color);
+    background-color: #fff; /* พื้นหลังของกล้องเป็นสีขาว */
+    color: var(--accent-color); /* สีข้อความเป็นสีดำ */
     padding: 15px;
     border-radius: var(--border-radius);
-    text-align: center;
     box-shadow: var(--box-shadow);
     margin: 20px;
     display: inline-block;
@@ -91,5 +92,5 @@ body {
 .footer {
     text-align: center;
     padding: 20px;
-    background-color: var(--accent-color);
+    background-color: var(--main-bg-color); /* สีเลือดหมูสำหรับ footer */
 }
