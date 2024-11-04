@@ -9,67 +9,37 @@
 <body>
 
     <!-- Header Section -->
-    <div class="header">
+    <header class="header">
         <div class="logo">
-            <img src="logo.jpeg" alt="Logo">
+            <img src="path_to_logo.jpg" alt="Jingjai Rental Logo">
         </div>
-        <h1>Jingjai Rental</h1>
-        <p>บริการเช่ากล้อง 24/7 ทั่วประเทศ ราคาดี ไม่มีค่ามัดจำ</p>
-        <a href="#camera-list" class="btn">เช่ากล้อง</a>
-    </div>
+        <nav class="navbar">
+            <a href="#cameras">กล้อง ให้เช่า</a>
+            <a href="#lenses">เลนส์ ให้เช่า</a>
+            <a href="#accessories">อุปกรณ์เสริม</a>
+            <a href="#price-list">ราคา</a>
+            <a href="#contact">ติดต่อ</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>ร้าน Jingjai Rental</h1>
+        <p>ให้เช่ากล้อง เลนส์ และอุปกรณ์ถ่ายภาพที่คุณต้องการ</p>
+    </section>
 
     <!-- Camera List Section -->
-    <div id="camera-list" class="camera-list">
+    <section id="cameras" class="camera-list">
         <div class="camera-item">
-            <img src="camera1.jpg" alt="DSLR Camera">
-            <h3>Canon PowerShot A3100IS</h3>
-            <p>กล้อง Compact คุณภาพสูง สำหรับผู้เริ่มต้น</p>
-            <p class="price">฿200/วัน</p>
-            <button onclick="openBookingForm('Canon PowerShot A3100IS', 200)">จองเลย</button>
+            <img src="camera1.jpg" alt="Canon EOS 90D">
+            <h3>Canon EOS 90D</h3>
+            <p>กล้อง DSLR ประสิทธิภาพสูง เหมาะสำหรับถ่ายภาพและวิดีโอ</p>
+            <p class="price">฿800/วัน</p>
+            <button class="rent-btn">เช่าตอนนี้</button>
         </div>
 
-        <div class="camera-item">
-            <img src="camera2.jpg" alt="Mirrorless Camera">
-            <h3>Canon PowerShot A3200IS</h3>
-            <p>กล้อง Compact คุณภาพสูง สำหรับการถ่ายภาพทั่วไป</p>
-            <p class="price">฿250/วัน</p>
-            <button onclick="openBookingForm('Canon PowerShot A3200IS', 250)">จองเลย</button>
-        </div>
+        <!-- Add more camera items as needed -->
+    </section>
 
-        <div class="camera-item">
-            <img src="camera3.jpg" alt="Canon PowerShot A530">
-            <h3>Canon PowerShot A530</h3>
-            <p>กล้อง Compact เหมาะสำหรับการใช้งานง่าย</p>
-            <p class="price">฿250/วัน</p>
-            <button onclick="openBookingForm('Canon PowerShot A530', 250)">จองเลย</button>
-       </div>
-
-        <div class="camera-item">
-            <img src="camera3.jpg" alt="Action Camera">
-            <h3>GoPro Hero 9</h3>
-            <p>กล้อง Action Camera สำหรับสายลุยทุกรูปแบบ</p>
-            <p class="price">฿500/วัน</p>
-            <button onclick="openBookingForm('GoPro Hero 9', 500)">จองเลย</button>
-        </div>
-    </div>
-
-    <!-- Booking Form Modal -->
-    <div id="bookingForm" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeBookingForm()">&times;</span>
-            <h2>ฟอร์มจองกล้อง</h2>
-            <p>รุ่นกล้อง: <span id="cameraModel"></span></p>
-            <p>ราคาต่อวัน: ฿<span id="cameraPrice"></span></p>
-            <form id="bookingFormDetails">
-                <label for="customerName">ชื่อผู้จอง:</label>
-                <input type="text" id="customerName" required>
-                <label for="bookingDays">จำนวนวันที่ต้องการเช่า:</label>
-                <input type="number" id="bookingDays" min="1" required>
-                <button type="submit">ยืนยันการจอง</button>
-            </form>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
