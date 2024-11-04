@@ -1,4 +1,4 @@
-/* Resetting default styles */
+/* Reset and Basic Styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,60 +6,70 @@
     font-family: Arial, sans-serif;
 }
 
-/* Main body styling */
+/* Main Colors */
+:root {
+    --primary-color: #800000; /* สีเลือดหมู */
+    --secondary-color: #ffffff;
+    --accent-color: #ffcc00;
+    --bg-color: #1a1a1a;
+}
+
+/* Body and Main Background */
 body {
-    background-color: #1a1a1a;
-    color: #fff;
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
 }
 
-/* Header section */
+/* Header */
 .header {
-    margin: 20px;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 10px 0;
     text-align: center;
 }
 
 .logo img {
-    width: 150px;
-    border-radius: 50%;
+    width: 120px;
 }
 
-h1 {
-    color: #ffcc00;
-    font-size: 2rem;
-    margin-top: 10px;
-}
-
-p {
-    color: #ccc;
-    font-size: 1.1rem;
-    margin-top: 5px;
-}
-
-/* Button styling */
-.btn {
-    background-color: #ff3300;
-    color: #fff;
-    padding: 10px 20px;
-    margin-top: 20px;
+.navbar a {
+    color: var(--secondary-color);
     text-decoration: none;
-    border-radius: 5px;
+    margin: 0 15px;
     font-size: 1rem;
-    transition: background-color 0.3s;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-.btn:hover {
-    background-color: #cc2900;
+.navbar a:hover {
+    color: var(--accent-color);
 }
 
-/* Camera list section */
+/* Hero Section */
+.hero {
+    padding: 50px;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Camera List Section */
 .camera-list {
     width: 80%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     margin-top: 30px;
 }
@@ -69,7 +79,7 @@ p {
     border-radius: 10px;
     padding: 15px;
     text-align: center;
-    color: #fff;
+    color: var(--secondary-color);
 }
 
 .camera-item img {
@@ -78,45 +88,32 @@ p {
 }
 
 .camera-item h3 {
+    font-size: 1.3rem;
+    color: var(--accent-color);
     margin-top: 10px;
-    font-size: 1.2rem;
-    color: #ffcc00;
 }
 
 .camera-item p {
-    font-size: 0.9rem;
-    color: #ccc;
+    font-size: 1rem;
 }
 
-.camera-item .price {
+.price {
     color: #ff3300;
     font-weight: bold;
-    margin-top: 5px;
+    margin: 10px 0;
 }
 
-/* Booking Modal styling */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-    background-color: #fff;
-    color: #000;
-    margin: 10% auto;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 500px;
-}
-
-.close {
-    float: right;
-    font-size: 24px;
+.rent-btn {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
     cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.rent-btn:hover {
+    background-color: #660000;
 }
