@@ -1,12 +1,14 @@
 :root {
     --main-bg-color: #800000; /* สีเลือดหมู */
     --accent-color: #000000; /* สีดำ */
-    --text-color: #fff; /* สีขาวสำหรับข้อความ */
-    --highlight-color: #ffcc00; /* สีที่ใช้สำหรับปุ่มหรือข้อความสำคัญ */
+    --text-color: #fff; /* สีขาว */
+    --highlight-color: #ffcc00; /* สีสำหรับปุ่ม */
+    --border-radius: 10px; /* ค่ารัศมีสำหรับมุม */
+    --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* เงาสำหรับกล่อง */
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* ฟอนต์สวยหรู */
     background-color: var(--main-bg-color);
     color: var(--text-color);
     margin: 0;
@@ -18,6 +20,7 @@ body {
     color: var(--text-color);
     padding: 20px;
     text-align: center;
+    box-shadow: var(--box-shadow);
 }
 
 .header h1, .header p {
@@ -25,22 +28,25 @@ body {
 }
 
 .header img {
-    width: 100px;
+    width: 120px; /* ปรับขนาดโลโก้ */
     border-radius: 50%;
+    margin-bottom: 10px; /* ระยะห่างจากข้อความ */
 }
 
 .btn {
     background-color: var(--highlight-color);
     color: var(--text-color);
-    padding: 10px 20px;
+    padding: 12px 24px;
     margin: 20px;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     text-decoration: none;
-    transition: background-color 0.3s;
+    font-weight: bold; /* ทำให้ข้อความหนา */
+    transition: background-color 0.3s, transform 0.2s; /* เพิ่มการเปลี่ยนสีและการขยาย */
 }
 
 .btn:hover {
-    background-color: #ffb300; /* สีเมื่อเลื่อนเมาส์บนปุ่ม */
+    background-color: #ffb300;
+    transform: scale(1.05); /* ขยายปุ่มเล็กน้อยเมื่อชี้เมาส์ */
 }
 
 .camera-list {
@@ -51,15 +57,16 @@ body {
 }
 
 .camera-item {
-    background-color: var(--accent-color); /* ใช้สีดำ */
+    background-color: var(--accent-color);
     padding: 15px;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     text-align: center;
+    box-shadow: var(--box-shadow); /* เงาสำหรับกล่องกล้อง */
 }
 
 .camera-item img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
 }
 
 .camera-item h3 {
@@ -78,39 +85,4 @@ body {
 .footer a {
     color: var(--highlight-color);
     text-decoration: none;
-}
-
-.rent-form {
-    background-color: var(--accent-color);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
-    margin: 20px auto;
-}
-
-.rent-form label {
-    display: block;
-    margin: 10px 0 5px;
-    color: var(--text-color);
-}
-
-.rent-form input,
-.rent-form select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid var(--highlight-color);
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-.rent-form button {
-    background-color: var(--highlight-color);
-    color: var(--text-color);
-    border: none;
-    cursor: pointer;
-}
-
-.rent-form button:hover {
-    background-color: #ffb300; /* สีเมื่อเลื่อนเมาส์บนปุ่ม */
 }
