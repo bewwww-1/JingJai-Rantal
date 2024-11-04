@@ -79,3 +79,38 @@ body {
     color: var(--highlight-color);
     text-decoration: none;
 }
+
+.rent-form {
+    background-color: var(--accent-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.rent-form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: var(--text-color);
+}
+
+.rent-form input,
+.rent-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--highlight-color);
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.rent-form button {
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+}
+
+.rent-form button:hover {
+    background-color: #ffb300; /* สีเมื่อเลื่อนเมาส์บนปุ่ม */
+}
