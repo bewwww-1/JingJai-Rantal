@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="th">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jingjai Rental - เช่ากล้องออนไลน์</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         <img src="logo.jpg" alt="Jingjai Rental Logo">
         <h1>Jingjai Rental</h1>
         <p>บริการเช่ากล้องทั่วประเทศ 24/7 ราคาดี ไม่มีค่ามัดจำ</p>
-        <a href="#camera-list" class="btn">เช่ากล้องตอนนี้</a>
     </header>
 
+    <nav class="navbar">
+        <a href="#camera-list">กล้อง</a>
+        <a href="#about">เกี่ยวกับเรา</a>
+        <a href="#contact">ติดต่อเรา</a>
+    </nav>
+
+    <section id="hero">
+        <h2>เช่ากล้องคุณภาพ</h2>
+        <p>เลือกกล้องที่คุณต้องการและเริ่มถ่ายภาพ</p>
+        <a href="rent.html" class="btn">เช่ากล้องตอนนี้</a>
+    </section>
+
     <section id="camera-list" class="camera-list">
+        <h2>กล้องยอดนิยม</h2>
         <div class="camera-item">
             <img src="camera1.jpg" alt="Canon EOS 90D">
             <h3>Canon EOS 90D</h3>
             <p>กล้อง DSLR สำหรับถ่ายภาพและวิดีโอ</p>
             <p class="price">฿800/วัน</p>
-            <a href="rent.html" class="btn">เช่ากล้องตอนนี้</a>
+            <a href="rent.html" class="btn">เช่าตอนนี้</a>
         </div>
-        <!-- เพิ่มกล้องอื่น ๆ ในรูปแบบเดียวกัน -->
+        <!-- เพิ่มกล้องอื่น ๆ ที่นี่ -->
     </section>
 
     <footer class="footer">
-        <a href="#about">เกี่ยวกับเรา</a>
-        <a href="#contact">ติดต่อเรา</a>
+        <p>&copy; 2024 Jingjai Rental. All rights reserved.</p>
         <a href="#terms">เงื่อนไขการให้บริการ</a>
     </footer>
 </body>
