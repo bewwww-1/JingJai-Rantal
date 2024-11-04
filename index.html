@@ -4,110 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>เช่ากล้องออนไลน์ - Jingjai Rental</title>
-    <style>
-        /* Resetting default styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Main body styling */
-        body {
-            background-color: #1a1a1a;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        /* Header section */
-        .header {
-            margin: 20px;
-            text-align: center;
-        }
-
-        .logo img {
-            width: 150px;
-            border-radius: 50%;
-        }
-
-        h1 {
-            color: #ffcc00;
-            font-size: 2rem;
-            margin-top: 10px;
-        }
-
-        p {
-            color: #ccc;
-            font-size: 1.1rem;
-            margin-top: 5px;
-        }
-
-        /* Button styling */
-        .btn {
-            background-color: #ff3300;
-            color: #fff;
-            padding: 10px 20px;
-            margin-top: 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: background-color 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #cc2900;
-        }
-
-        /* Camera list section */
-        .camera-list {
-            width: 80%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .camera-item {
-            background-color: #333;
-            border-radius: 10px;
-            padding: 15px;
-            text-align: center;
-            color: #fff;
-        }
-
-        .camera-item img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .camera-item h3 {
-            margin-top: 10px;
-            font-size: 1.2rem;
-            color: #ffcc00;
-        }
-
-        .camera-item p {
-            font-size: 0.9rem;
-            color: #ccc;
-        }
-
-        .camera-item .price {
-            color: #ff3300;
-            font-weight: bold;
-            margin-top: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <!-- Header Section -->
     <div class="header">
         <div class="logo">
-            <img src="logo.jpeg" alt="Logo">
+            <img src="path_to_your_logo.jpeg" alt="Logo">
         </div>
         <h1>Jingjai Rental</h1>
         <p>บริการเช่ากล้อง 24/7 ทั่วประเทศ ราคาดี ไม่มีค่ามัดจำ</p>
@@ -116,12 +20,12 @@
 
     <!-- Camera List Section -->
     <div id="camera-list" class="camera-list">
-        <!-- Camera Item -->
         <div class="camera-item">
             <img src="camera1.jpg" alt="DSLR Camera">
             <h3>Canon EOS 90D</h3>
             <p>กล้อง DSLR ประสิทธิภาพสูง เหมาะสำหรับถ่ายภาพและวิดีโอ</p>
             <p class="price">฿800/วัน</p>
+            <button onclick="openBookingForm('Canon EOS 90D', 800)">จองเลย</button>
         </div>
 
         <div class="camera-item">
@@ -129,6 +33,7 @@
             <h3>Sony A7 III</h3>
             <p>กล้อง Mirrorless คุณภาพสูง มีระบบกันสั่นและภาพคมชัด</p>
             <p class="price">฿1,000/วัน</p>
+            <button onclick="openBookingForm('Sony A7 III', 1000)">จองเลย</button>
         </div>
 
         <div class="camera-item">
@@ -136,8 +41,27 @@
             <h3>GoPro Hero 9</h3>
             <p>กล้อง Action Camera สำหรับสายลุยทุกรูปแบบ</p>
             <p class="price">฿500/วัน</p>
+            <button onclick="openBookingForm('GoPro Hero 9', 500)">จองเลย</button>
         </div>
     </div>
 
+    <!-- Booking Form Modal -->
+    <div id="bookingForm" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBookingForm()">&times;</span>
+            <h2>ฟอร์มจองกล้อง</h2>
+            <p>รุ่นกล้อง: <span id="cameraModel"></span></p>
+            <p>ราคาต่อวัน: ฿<span id="cameraPrice"></span></p>
+            <form id="bookingFormDetails">
+                <label for="customerName">ชื่อผู้จอง:</label>
+                <input type="text" id="customerName" required>
+                <label for="bookingDays">จำนวนวันที่ต้องการเช่า:</label>
+                <input type="number" id="bookingDays" min="1" required>
+                <button type="submit">ยืนยันการจอง</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
