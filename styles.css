@@ -1,7 +1,7 @@
 :root {
     --main-bg-color: #800000; /* สีเลือดหมู */
-    --accent-color: #333;
-    --text-color: #fff;
+    --accent-color: #000000; /* สีดำ */
+    --text-color: #fff; /* สีขาวสำหรับข้อความ */
     --highlight-color: #ffcc00; /* สีที่ใช้สำหรับปุ่มหรือข้อความสำคัญ */
 }
 
@@ -40,7 +40,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #ffb300;
+    background-color: #ffb300; /* สีเมื่อเลื่อนเมาส์บนปุ่ม */
 }
 
 .camera-list {
@@ -51,7 +51,7 @@ body {
 }
 
 .camera-item {
-    background-color: var(--accent-color);
+    background-color: var(--accent-color); /* ใช้สีดำ */
     padding: 15px;
     border-radius: 10px;
     text-align: center;
