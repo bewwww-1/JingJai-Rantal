@@ -8,52 +8,55 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* ฟอนต์สวยหรู */
+    font-family: 'Roboto', sans-serif;
     background-color: var(--main-bg-color);
     color: var(--text-color);
     margin: 0;
     padding: 0;
 }
 
-.header, .footer {
+.header {
     background-color: var(--main-bg-color);
     color: var(--text-color);
-    padding: 20px;
     text-align: center;
+    padding: 20px;
     box-shadow: var(--box-shadow);
-}
-
-.header h1, .header p {
-    margin: 10px 0;
 }
 
 .header img {
     width: 120px; /* ปรับขนาดโลโก้ */
     border-radius: 50%;
-    margin-bottom: 10px; /* ระยะห่างจากข้อความ */
 }
 
-.btn {
-    background-color: var(--highlight-color);
-    color: var(--text-color);
-    padding: 12px 24px;
-    margin: 20px;
-    border-radius: var(--border-radius);
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: var(--accent-color);
+    padding: 10px 0;
+}
+
+.navbar a {
+    color: var(--highlight-color);
     text-decoration: none;
-    font-weight: bold; /* ทำให้ข้อความหนา */
-    transition: background-color 0.3s, transform 0.2s; /* เพิ่มการเปลี่ยนสีและการขยาย */
+    margin: 0 20px;
+    font-weight: bold;
 }
 
-.btn:hover {
-    background-color: #ffb300;
-    transform: scale(1.05); /* ขยายปุ่มเล็กน้อยเมื่อชี้เมาส์ */
+#hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    padding: 60px 20px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
 .camera-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
     padding: 20px;
+    text-align: center;
 }
 
 .camera-item {
@@ -61,7 +64,10 @@ body {
     padding: 15px;
     border-radius: var(--border-radius);
     text-align: center;
-    box-shadow: var(--box-shadow); /* เงาสำหรับกล่องกล้อง */
+    box-shadow: var(--box-shadow);
+    margin: 20px;
+    display: inline-block;
+    width: 300px; /* กำหนดความกว้างกล่อง */
 }
 
 .camera-item img {
@@ -69,20 +75,21 @@ body {
     border-radius: var(--border-radius);
 }
 
-.camera-item h3 {
-    color: var(--highlight-color);
-    margin-top: 10px;
+.btn {
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ffb300;
 }
 
 .footer {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    font-size: 0.9rem;
-}
-
-.footer a {
-    color: var(--highlight-color);
-    text-decoration: none;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--accent-color);
 }
