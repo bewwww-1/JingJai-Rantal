@@ -1,96 +1,97 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Squada+One&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
+  box-sizing: border-box;
+  font-family: var(--font-family-2);
+}
+/* Variables */
 :root {
-    --main-bg-color: #800000; /* สีเลือดหมู */
-    --secondary-bg-color: #f8f8f8; /* สีพื้นหลังรอง (สีเทาอ่อน) */
-    --accent-color: #333; /* สีดำ */
-    --text-color: #fff; /* สีขาว */
-    --highlight-color: #ffcc00; /* สีสำหรับปุ่ม */
-    --border-radius: 10px; /* ค่ารัศมีสำหรับมุม */
-    --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* เงาสำหรับกล่อง */
+  --main-color: #fa7104;
+  --second-color: #e05404
+  --text-color: #060414
+  --container-color: #efe8e0;
+  --bg-color: #f7f7f7;
+  --text-alter-color: #818181;
+  --poppins-font: "Poppins", serif;
+  --font-family-2: "Squada One", serif;
 }
-
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--secondary-bg-color); /* พื้นหลังของ body เป็นสีเทาอ่อน */
-    color: var(--accent-color); /* สีข้อความ */
-    margin: 0;
-    padding: 0;
+  color: var(--text-color);
+  background: var(--bg-color);
 }
-
-.header {
-    background-color: var(--main-bg-color); /* สีเลือดหมูสำหรับ header */
-    color: var(--text-color);
-    text-align: center;
-    padding: 20px;
-    box-shadow: var(--box-shadow);
+a{
+  text-decoration: none;
 }
-
-.header img {
-    width: 120px; /* ปรับขนาดโลโก้ */
-    border-radius: 50%;
+img{
+  width: 100%;
 }
-
-.navbar {
-    display: flex;
-    justify-content: center;
-    background-color: var(--accent-color); /* สีดำสำหรับ navbar */
-    padding: 10px 0;
+section{
+  padding: 3rem 0 2rem;
 }
-
-.navbar a {
-    color: var(--highlight-color);
-    text-decoration: none;
-    margin: 0 20px;
-    font-weight: bold;
+.container{
+  max-width: 1060px;
+  margin: auto;
+  width: 100%;
 }
-
-#hero {
-    background: url('hero-bg.jpg') no-repeat center center/cover; /* แบ็กกราวด์สำหรับ hero */
-    padding: 60px 20px;
-    text-align: center;
-    color: var(--text-color);
+header{
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  z-index: 100;
 }
-
-#hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--text-color);
+  padding: 17px 20px;
+  border-radius: 0.8rem;
 }
-
-.camera-list {
-    padding: 20px;
-    text-align: center;
+.logo{
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: var(--bg-color);
+  text-transform: uppercase;
+  font-family: var(--font-family-2);
 }
-
-.camera-item {
-    background-color: #fff; /* พื้นหลังของกล้องเป็นสีขาว */
-    color: var(--accent-color); /* สีข้อความเป็นสีดำ */
-    padding: 15px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    margin: 20px;
-    display: inline-block;
-    width: 300px; /* กำหนดความกว้างกล่อง */
+.logo span {
+  color: var(--main-color);
 }
-
-.camera-item img {
-    width: 100%;
-    border-radius: var(--border-radius);
+.navbar{
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
 }
-
-.btn {
-    background-color: var(--highlight-color);
-    color: var(--text-color);
-    padding: 10px 20px;
-    border-radius: var(--border-radius);
-    text-decoration: none;
-    transition: background-color 0.3s;
+.nav-link{
+  font-size: 0.88rem;
+  color: var(--text-alter-color);
+  font-family: var(--poppins-font);
+  transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-
-.btn:hover {
-    background-color: #ffb300;
+.nav-link:hover{
+  color: var(--bg-color);
+  transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-
-.footer {
-    text-align: center;
-    padding: 20px;
-    background-color: var(--main-bg-color); /* สีเลือดหมูสำหรับ footer */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-icons .bx{
+  color: var(--bg-color);
+  font-size: 20px;
+}
+.nav-icons .user-icon{
+  padding: 7px;
+  background: var(--main-color);
+  border-radius: 50%;
+}
+.nav-icons .user-icon:hover {
+  background: var(--second-color);
+  transition: 0.3s ease;
 }
